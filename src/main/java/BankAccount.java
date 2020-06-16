@@ -17,19 +17,19 @@ public class BankAccount {
 
     public BigDecimal credit(BigDecimal credit) {
         //BigDecimal credit = new BigDecimal(200.00);
-        balance = balance.add(credit);
         if (balance.compareTo(BigDecimal.ZERO) < 0) {
             System.out.print("Not enough money");
         }
+        balance = balance.add(credit);
         return balance;
     }
 
     public BigDecimal debet(BigDecimal debet) {
         //BigDecimal debet = new BigDecimal(150.00);
-        balance = balance.subtract(debet);
         if (balance.compareTo(BigDecimal.ZERO) < 0) {
             System.out.print("Not enough money");
         }
+        balance = balance.subtract(debet);
         return balance;
     }
 }
